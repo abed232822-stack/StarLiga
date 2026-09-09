@@ -44,7 +44,7 @@
 
 ## 📌 Project Overview
 
-**StarLiga** is a cross-platform mobile application designed to digitize and manage local and regional football tournaments. From club registration and squad management to multi-bracket tournament tables, chronological match event timelines, and detailed player performance statistics, StarLiga provides organizers, clubs, players, and fans with a modern, high-contrast tournament experience.
+**StarLiga** is a cross-platform mobile application designed to digitize and manage local and regional football tournaments. From club registration and squad management to multi-bracket tournament tables, match event timelines, and detailed player performance statistics, StarLiga provides organizers, clubs, players, and fans with a modern, high-contrast tournament experience.
 
 ### Architectural Goals:
 - **Clean Feature Decoupling**: Isolate UI presentation from data access and API interaction.
@@ -56,14 +56,14 @@
 
 ## 📸 Interface Showcase & App Previews
 
-A comprehensive visual walkthrough of StarLiga’s high-contrast **Stadium Pitch Dark** interface, customized for right-to-left Arabic typography, fluid animations, and real-time tournament operations.
+A comprehensive visual walkthrough of StarLiga’s high-contrast **Stadium Pitch Dark** interface, customized for right-to-left Arabic typography, fluid animations, and tournament operations.
 
-### 🏟️ Matchday Experience & Live Feeds
+### 🏟️ Matchday Experience & Fixtures
 
 | 🏠 League Hub (الرئيسية) | ⚽ Match Fixtures (المباريات) | ⏱️ Match Timeline (تفاصيل المباراة) |
 | :---: | :---: | :---: |
 | <img src="assets/screenshots/home.webp" width="240" alt="StarLiga League Hub" /> | <img src="assets/screenshots/matches.webp" width="240" alt="StarLiga Matches Feed" /> | <img src="assets/screenshots/match_details.webp" width="240" alt="StarLiga Match Details & Timeline" /> |
-| **League Dashboard**<br/>• Auto-sliding news banner carousel<br/>• Smooth RTL breaking news ticker<br/>• Top clubs leaderboard spotlight | **Tournament Fixtures**<br/>• Filtered Upcoming vs. Past feeds<br/>• High-contrast club scoreboards<br/>• Venue, round, and kickoff time cards | **Live Match Details**<br/>• Chronological minute-by-minute timeline<br/>• Real-time goal (⚽) and card (🟨/🟥) tags<br/>• Collapsible team starting lineups |
+| **League Dashboard**<br/>• Auto-sliding news banner carousel<br/>• Smooth RTL breaking news ticker<br/>• Top clubs leaderboard spotlight | **Tournament Fixtures**<br/>• Filtered Upcoming vs. Past feeds<br/>• High-contrast club scoreboards<br/>• Venue, round, and kickoff time cards | **Match Details**<br/>• Match events summary timeline<br/>• Recorded goal (⚽) and card (🟨/🟥) tags<br/>• Collapsible team starting lineups |
 
 ### 📊 League Tables & Player Statistics
 
@@ -83,10 +83,10 @@ A comprehensive visual walkthrough of StarLiga’s high-contrast **Stadium Pitch
 
 ## ✨ Key Modules & Features
 
-### 1. 🏠 League Hub & Dynamic Broadcast (الرئيسية)
+### 1. 🏠 League Hub & Dashboard (الرئيسية)
 > 📸 *UI Preview: [League Hub Screen (`home.webp`)](#-interface-showcase--app-previews)*
 - **Visual News Carousel**: Interactive banner carousel (`carousel_slider`) featuring high-resolution tournament announcements and visual press releases with subtle gradient overlays.
-- **Live News Ticker (Marquee)**: Smooth, horizontally scrolling RTL ticker bar (`marquee`) delivering instant tournament updates and breaking notices.
+- **News Ticker (Marquee)**: Smooth, horizontally scrolling RTL ticker bar (`marquee`) delivering tournament updates and announcements.
 - **Top Teams Leaderboard Spotlight**: Dynamic grid spotlighting top-performing clubs and their accumulated win records.
 - **Engaging Micro-Interactions**: Custom vector soccer ball loading animations powered by Lottie (`assets/animations/soccer-loading.json`).
 
@@ -129,7 +129,7 @@ A comprehensive visual walkthrough of StarLiga’s high-contrast **Stadium Pitch
 - **Match Card Component**: High-contrast match summary displaying competing clubs, crests, kickoff time, tournament round, stadium venue, and final score.
 - **Match Details Page**:
   - Expandable / collapsible team lineups (`expandable`) for both squads.
-  - **Minute-by-Minute Event Timeline**: Chronological event tracker built with `timeline_tile`, visualizing goals (⚽), yellow cards (🟨), and red cards (🟥) linked to the respective player and squad.
+  - **Match Event Timeline**: Visual event timeline built with `timeline_tile`, displaying recorded goals (⚽), yellow cards (🟨), and red cards (🟥) linked to the respective player and squad.
 
 ---
 
@@ -195,7 +195,7 @@ lib/
 │   ├── header_text.dart            # Standard section header typography
 │   ├── image_picker.dart           # Club crest image picker component
 │   ├── match_card.dart             # Match fixture and score component
-│   ├── match_time_line.dart        # Chronological timeline item for match events
+│   ├── match_time_line.dart        # Timeline item for match events
 │   ├── player_wide_card.dart       # Player card with role badge & delete action
 │   ├── simple_info_card.dart       # Summary counter badge component
 │   ├── stats_card.dart             # Top team highlight card
@@ -315,7 +315,7 @@ The application embeds real-world sports regulations directly into its validatio
 | **Dependency Injection** | [get_it](https://pub.dev/packages/get_it) `^9.2.1` | Fast, decoupled service locator |
 | **UI & Animations** | [carousel_slider](https://pub.dev/packages/carousel_slider) `^5.1.2` | Interactive banner carousel |
 | | [marquee](https://pub.dev/packages/marquee) `^2.3.0` | Horizontal news ticker widget |
-| | [timeline_tile](https://pub.dev/packages/timeline_tile) `^2.0.0` | Chronological match event timelines |
+| | [timeline_tile](https://pub.dev/packages/timeline_tile) `^2.0.0` | Match event timeline display |
 | | [expandable](https://pub.dev/packages/expandable) `^5.0.1` | Collapsible squad lineup tiles |
 | | [lottie](https://pub.dev/packages/lottie) `^3.5.1` | Vector animation playback for custom ball loader |
 | **Media & Alerts** | [image_picker](https://pub.dev/packages/image_picker) `^1.2.3` | Native gallery image picker for club crests |
